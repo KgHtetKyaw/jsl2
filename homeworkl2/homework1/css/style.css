@@ -1,0 +1,445 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /*font-family: 'Lobster', cursive;*/
+    font-family: sans-serif;
+    background-color: royalblue;
+    color: #fff;
+
+    margin: 0;
+}
+
+/* Start AutoText Effect */
+.autotexteffect-container{
+    width: 70%;
+    height: 420px;
+    background-color: darkslateblue;
+    font-size: 20px;
+
+    border: 0;
+    border-radius: 5px;
+
+    margin: 20px;
+    padding: 10px 20px;
+
+    opacity: 0.8;
+
+    position: relative;
+}
+
+.text-controls{
+    width: 100%;
+    height: 100px;
+    background-color: darkslateblue;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: -110px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    opacity: 0.8;
+}
+
+.text-controls input{
+    width: 400px;
+    cursor: pointer;
+}
+/* End AutoText Effect */
+
+
+/* Start Hidden Search */
+.hiddensearch-container{
+    width: 24%;
+    height: 150px;
+    background-color: darkslateblue;
+
+    border: 0;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 17px;
+
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+    opacity: 0.8;
+}
+
+.hiddensearchs{
+    height: 50px;
+
+    position: relative;
+}
+
+.hiddensearchs input{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+}
+
+.hiddensearchs input:focus{
+    outline: 0;
+}
+
+.hiddensearchs.active input{
+    width: 245px;
+}
+
+.hiddensearchs button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+
+    /*transform: translate(0px);*/
+
+    transition: all 0.3s ease;
+}
+
+.hiddensearchs.active button{
+    left: 200px;
+}
+/* End Hidden Search */
+
+
+/*Start AutoCount Effect*/
+.autocounteffect-countainer{
+    width: 24%;
+    height: 380px;
+    background-color: darkslateblue;
+
+    border: 0;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 180px;
+    right: 17px;
+}
+
+.autocounteffect{
+    position: relative;
+}
+
+.autocount{
+    width: 45%;
+    height: 45%;
+    background-color: slateblue;
+
+    font-size: 14px;
+
+    border: 0;
+    border-radius: 5px;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+}
+
+.c1{
+    width: 150px;
+    height: 150px;
+
+    top: 30px;
+    left: 30px;
+}
+
+.c2{
+    width: 150px;
+    height: 150px;
+
+    top: 30px;
+    right: 30px;
+}
+
+.c3{
+    width: 150px;
+    height: 150px;
+
+    top: 200px;
+    left: 30px;
+}
+
+.c4{
+    width: 150px;
+    height: 150px;
+
+    top: 200px;
+    right: 30px;
+}
+
+.count{
+    font-size: 30px;
+    margin: 5px;
+}
+/*End AutoCount Effect*/
+
+
+/*Start Button Ripple Effect*/
+.buttonrippleeffect-container{
+    width: 70%;
+    height: 100px;
+    /*background-color: red;*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 140px;
+    margin-left: 15%;
+    margin-right: 15%;
+
+    overflow: hidden;
+}
+
+.btnr{
+    background-color: darkslateblue;
+    color: #fff;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid darkslateblue;
+
+    padding: 20px 60px;
+    margin: 0 10px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.btnr:focus{
+    outline: 0;
+}
+
+.btnr .circle{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%) scale(0);
+
+    animation-name: btnani;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes btnani{
+    to{
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
+/*End Button Ripple Effect*/
+
+
+/*Start Material Form Design*/
+.marterialformdesign-container{
+    width: 300px;
+    height: 360px;
+    background-color: royalblue;
+    box-shadow: 10px 10px 20px black;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+    display: none;
+}
+
+.marterialformdesign-container.active{
+    display: block;
+}
+
+.form-group{
+    position: relative;
+}
+
+.mfd-title{
+    background-color: skyblue;
+    color: darkslateblue;
+    border-radius: 5px 5px 0 0;
+
+    text-align: center;
+
+    padding: 5px;
+}
+
+.mfd-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.mfd-btn-close{
+    color: darkslateblue;
+    font-size: 16px;
+
+    border: 1px solid darkslateblue;
+    border-radius: 50%;
+
+    padding: 2px 6px;
+
+    cursor: pointer;
+}
+
+.mfd-input{
+    margin: 20px;
+
+    position: relative;
+}
+
+.mfd-form-control{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px solid skyblue;
+    border-radius: 5px;
+
+    font-size: 18px;
+
+    padding: 8px 0;
+    margin: 5px 0;
+
+    transition: all 0.3s;
+}
+
+.mfd-form-control:focus{
+    outline: 0;
+    border-color: darkslateblue;
+}
+
+.mfd-input label{
+    font-size: 18px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+}
+
+.mfd-input label span{
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.mfd-input input:focus + label span,
+.mfd-input input:valid + label span{
+    color: darkslateblue;
+    transform: translateY(-30px);
+}
+
+.mfd-input .mfd-btn-login{
+    width: 100%;
+    background-color: skyblue;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 0;
+    border: none;
+
+    cursor: pointer;
+}
+
+.mfd-input .mfd-btn-login:focus{
+    outline: none;
+}
+
+.mfd-input .mfd-btn-login:active{
+    transform: scale(0.98);
+}
+
+.mfd-p{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+    padding: 10px 20px;
+}
+
+/*End Material Form Design*/
+
+
+
+@media (max-width:620px){
+    .autotexteffect-container{
+        max-width: 68%;
+    }
+
+    .c1,.c2,.c3,.c4{
+        left: 13px;
+    }
+
+}
+
+@media (max-width: 1500px){
+    .autotexteffect-container{
+        height: 500px;
+    }
+
+    .autocounteffect-countainer{
+        height: 460px;
+    }
+
+    .count{
+        margin: 0;
+    }
+
+    .c1,.c2,.c3,.c4{
+        width: 110px;
+        height: 105px;
+
+        font-size: 11px;
+    }
+
+    .c1{
+        top: 10px;
+    }
+
+    .c2{
+        top: 120px;
+    }
+
+    .c3{
+        top: 235px;
+    }
+
+    .c4{
+        top: 350px;
+    }
+
+    .btnr{
+        font-size: 14px;
+    }
+}
